@@ -18,9 +18,9 @@ class ViewController: UIViewController {
         
         let url = NSURL(string: "http://www.stackoverflow.com")!
         
-        webView.loadRequest(NSURLRequest(URL: url))
+        // webView.loadRequest(NSURLRequest(URL: url))
         
-        /*
+        
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             // This runs when task completes
             if let urlContent = data {
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         }
         
         task.resume()
-        */
+        
     }
 
     override func didReceiveMemoryWarning() {
