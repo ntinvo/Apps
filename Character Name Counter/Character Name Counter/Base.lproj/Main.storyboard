@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Character_Name_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKO-S5-wc6">
+                                <rect key="frame" x="20" y="37" width="335" height="72"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txtNameAct:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="dGH-lM-Onv"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50x-zT-m9V">
+                                <rect key="frame" x="20" y="126" width="335" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-e5-XRF">
+                                <rect key="frame" x="20" y="421" width="335" height="68"/>
+                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhi-aT-nne"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OS2-hW-ce7">
+                                <rect key="frame" x="20" y="513" width="335" height="68"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fye-5I-SYB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImQ-wj-OAF">
+                                <rect key="frame" x="20" y="190" width="335" height="218"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="106"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aYi-e5-XRF" firstAttribute="top" secondItem="ImQ-wj-OAF" secondAttribute="bottom" constant="13" id="1n7-i4-eHK"/>
+                            <constraint firstItem="mKO-S5-wc6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6b9-cr-NfD"/>
+                            <constraint firstItem="50x-zT-m9V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CeC-sz-ize"/>
+                            <constraint firstItem="ImQ-wj-OAF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGv-LX-Omw"/>
+                            <constraint firstItem="aYi-e5-XRF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fs0-2Y-R4d"/>
+                            <constraint firstItem="OS2-hW-ce7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JIz-4i-PjX"/>
+                            <constraint firstItem="ImQ-wj-OAF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LVs-z4-hnQ"/>
+                            <constraint firstItem="OS2-hW-ce7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PKV-NE-Ocn"/>
+                            <constraint firstItem="ImQ-wj-OAF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Tf8-Vw-bto"/>
+                            <constraint firstItem="mKO-S5-wc6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anS-tv-NPB"/>
+                            <constraint firstItem="OS2-hW-ce7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fV9-4T-hi1"/>
+                            <constraint firstItem="aYi-e5-XRF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hPL-LE-hgH"/>
+                            <constraint firstItem="mKO-S5-wc6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hTw-Kb-ZPo"/>
+                            <constraint firstItem="50x-zT-m9V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iGb-td-Sl3"/>
+                            <constraint firstItem="50x-zT-m9V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jvh-0j-vdJ"/>
+                            <constraint firstItem="OS2-hW-ce7" firstAttribute="top" secondItem="aYi-e5-XRF" secondAttribute="bottom" constant="24" id="lo7-Ky-JVe"/>
+                            <constraint firstItem="50x-zT-m9V" firstAttribute="top" secondItem="mKO-S5-wc6" secondAttribute="bottom" constant="17" id="mRy-gG-5sc"/>
+                            <constraint firstItem="aYi-e5-XRF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oBT-Hw-bfs"/>
+                            <constraint firstItem="ImQ-wj-OAF" firstAttribute="top" secondItem="mKO-S5-wc6" secondAttribute="bottom" constant="81" id="vId-Bn-aax"/>
+                            <constraint firstItem="mKO-S5-wc6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="xw7-iu-fqW"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lblTotalChar" destination="ImQ-wj-OAF" id="QGg-8p-DYD"/>
+                        <outlet property="txtName" destination="mKO-S5-wc6" id="Vrn-Jm-SJQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="265.5"/>
+        </scene>
+    </scenes>
+</document>
